@@ -1,4 +1,7 @@
 const container = document.getElementById('container');
-const small_square = document.createElement('div');
-small_square.className = 'square'; 
-container.appendChild(small_square);
+
+for(let i=0; i<4; i++){
+    const square = document.createElement('div');
+    square.className = 'square';
+    container.appendChild(square);
+}

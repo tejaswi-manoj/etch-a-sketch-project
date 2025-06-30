@@ -22,18 +22,22 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;  
-  align-items: flex-start;  
-  justify-content: flex-start;  
-  width: 600px;
-  height: 600px;
+  justify-content: center;
+  width: 602px;
+  height: 602px;
   background-color: white;
-  border: 3px solid black;
+  border: 2px solid black;
   left: 0%;
+  gap: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
-.square{
-    width: 300px;
-    height: 300px;
+.square {
+    width: 299.25px;
+    height:299.25px;
     background-color: white;
     border: 1px solid black;
+    padding: 0;
+    margin: 0;
 }
