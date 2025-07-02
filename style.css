@@ -1,7 +1,7 @@
 *{
     background-color: azure;
     margin:0px;
-    padding:10px;
+    box-sizing: border-box;
 }
 
 .main_heading{
@@ -18,25 +18,26 @@
     gap: 80px;
 }
 
-#container {
+#grid {
+  box-sizing: border-box;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
-  width: 602px;
-  height: 602px;
-  background-color: white;
+  justify-content: center;
+  flex-wrap: wrap;
   border: 2px solid black;
-  gap: 0px;
-  padding: 0px;
+  width: 640px;
+  height: 640px;
   margin: 0px;
+  padding: 0px;
 }
 
-.square {
-    width: 199px;
-    height:199px;
-    background-color: white;
-    border: 1px solid black;
-    padding: 0;
-    margin: 0;
+.tile {
+  box-sizing: border-box;
+  border: 1px solid black;
+  text-align: center;
+  aspect-ratio: 1/1;
+  flex-basis: calc(100%/100);
 }
+
+
+ 
