@@ -1,4 +1,8 @@
+document.getElementById("range").addEventListener("input", function(){
+    const value_display  = this.value
+    document.getElementById("value_dis").textContent = `${value_display} x ${value_display}`;
 
+});
 
 
 let userInput = 10;
