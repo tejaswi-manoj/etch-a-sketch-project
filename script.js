@@ -1,4 +1,5 @@
-    let userInput = 50;
+    let userInput = 10;
+
     const grid = document.getElementById("grid");
 
     for(let i=0; i<userInput*userInput; i++){
@@ -8,7 +9,5 @@
         tile.classList.add("tile");
 
         tile.style.flexBasis = `calc(100% / ${userInput})`;
-    }
+    }    
 
-
- 
