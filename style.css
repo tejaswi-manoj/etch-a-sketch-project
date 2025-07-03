@@ -1,11 +1,10 @@
 *{
     background-color: azure;
-    margin:0px;
     box-sizing: border-box;
 }
 
 .main_heading{
-    padding: 30px;
+    padding: 0px;
     font-family: "IM Fell DW Pica", serif;
     text-align: center;
     font-size: 50px;
@@ -16,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap: 30px;
 }
 
 #grid {
@@ -40,5 +39,14 @@
   flex-basis: calc(100%/100);
 }
 
-
+.enter_color{
+  font-family: "IM Fell DW Pica", serif;
+  padding: 0px;
+  margin: 0px;
+}
  
+.choose{
+  display: flex;
+  gap: 10px;
+}
+
