@@ -56,3 +56,13 @@ button{
   border-radius: 10px;
   font-family: "IM Fell DW Pica", serif;
 }
+
+.grid_size{
+  display: flex;
+  background-color: white;
+}
+
+.range_div{
+  display: flex;
+  flex-direction: column;
+}
