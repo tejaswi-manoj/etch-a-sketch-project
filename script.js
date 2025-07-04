@@ -3,6 +3,9 @@
 const grid = document.getElementById("grid");
 let color;
 let flag;
+let isDrawing = false;
+let isErasing = false;
+
 
 // Get user input for number of rows/cols in the grid
 
@@ -71,6 +74,40 @@ precision.addEventListener("click", function precisionEffect(){
     flag = 0;
 })
 
+// Eraser
+
+const eraser = document.getElementById("eraser")
+
+eraser.addEventListener("click", function eraserEffect(){
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => {
+        if (flag==1){
+            tile.removeEventListener("mouseenter", hoverColor);
+        }
+
+        if (flag==0){
+            tile.removeEventListener("click", precisionColor);
+        }
+        
+        tile.addEventListener("mousedown", function() {
+            isErasing = true;
+            tile.style.backgroundColor = "white"; // Erase the tile immediately
+        });
+        
+        // Add mouseenter for dragging
+        tile.addEventListener("mouseenter", function() {
+            if (isErasing) {
+                tile.style.backgroundColor = "white";
+            }
+        });
+    });
+
+    document.addEventListener("mouseup", function() {
+        isErasing = false;
+    });
+
+    flag = 2;
+})
 
 
 // Get color functions
