@@ -48,4 +48,8 @@ precision.addEventListener("click", function precisionEffect(){
     });
 })
 
+document.getElementById("colorInput").addEventListener("input", function() {
+    color = this.value;
+});
+
 
