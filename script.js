@@ -2,6 +2,7 @@
 
 const grid = document.getElementById("grid");
 let color;
+let flag;
 
 // Get user input for number of rows/cols in the grid
 
@@ -28,10 +29,12 @@ hover.addEventListener("click", function hoverEffect(){
     // Get all tiles and add hover effect to each one
     const tiles = document.querySelectorAll(".tile");
     tiles.forEach(tile => {
-        tile.addEventListener("mouseenter", function() {
-            tile.style.backgroundColor = color;
-        });
+        if (flag==0){
+            tile.removeEventListener("click", precisionColor);
+        }
+        tile.addEventListener("mouseenter", hoverColor);
     });
+    flag = 1;
 })
 
 // Precision Effect
@@ -42,14 +45,23 @@ precision.addEventListener("click", function precisionEffect(){
     color = document.getElementById("colorInput").value;
     const tiles = document.querySelectorAll(".tile");
     tiles.forEach(tile => {
-        tile.addEventListener("click", function() {
-            tile.style.backgroundColor = color;
-        });
+        if (flag==1){
+            tile.removeEventListener("mouseenter", hoverColor);
+        }
+        tile.addEventListener("click", precisionColor);
     });
+    flag = 0;
 })
 
-document.getElementById("colorInput").addEventListener("input", function() {
+document.getElementById("colorInput").addEventListener("input", function(){
     color = this.value;
-});
+})
 
+function hoverColor() {
+    this.style.backgroundColor = color;
+}
+
+function precisionColor() {
+    this.style.backgroundColor = color;
+}
 
