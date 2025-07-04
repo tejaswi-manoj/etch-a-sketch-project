@@ -34,6 +34,8 @@ hover.addEventListener("click", function hoverEffect(){
         }
         tile.addEventListener("mouseenter", hoverColor);
     });
+
+
     flag = 1;
 })
 
@@ -48,10 +50,30 @@ precision.addEventListener("click", function precisionEffect(){
         if (flag==1){
             tile.removeEventListener("mouseenter", hoverColor);
         }
-        tile.addEventListener("click", precisionColor);
+        
+        tile.addEventListener("mousedown", function() {
+            isDrawing = true;
+            tile.style.backgroundColor = color; // Color the tile immediately
+        });
+        
+        // Add mouseenter for dragging
+        tile.addEventListener("mouseenter", function() {
+            if (isDrawing) {
+                tile.style.backgroundColor = color;
+            }
+        });
     });
+
+    document.addEventListener("mouseup", function() {
+        isDrawing = false;
+    });
+    
     flag = 0;
 })
+
+
+
+// Get color functions
 
 document.getElementById("colorInput").addEventListener("input", function(){
     color = this.value;
