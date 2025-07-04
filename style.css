@@ -55,6 +55,12 @@ h2 {
 button{
   border-radius: 10px;
   font-family: "IM Fell DW Pica", serif;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }
 
 .grid_size{
@@ -75,4 +81,35 @@ button{
 .grid_value{
   display: flex;
   gap: 10px;
+}
+
+.sub_heading{
+  font-family: "IM Fell DW Pica", serif;
+  font-size: 20px;
+}
+
+.bullets{
+  font-family: "IM Fell DW Pica", serif;
+  font-size: 18px;
+}
+
+.whole{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tools, .instructions{
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+  height: 90px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.bold{
+  font-weight: bold;
 }
