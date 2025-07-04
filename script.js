@@ -19,12 +19,12 @@ function getUserInput(){
 }
 document.getElementById("range").addEventListener("input", getUserInput);
 
-
+// Hover Effect
 
 const hover = document.getElementById("hover");
 
 hover.addEventListener("click", function hoverEffect(){
-    color = getColor();
+    color = document.getElementById("colorInput").value;
     // Get all tiles and add hover effect to each one
     const tiles = document.querySelectorAll(".tile");
     tiles.forEach(tile => {
@@ -32,15 +32,20 @@ hover.addEventListener("click", function hoverEffect(){
             tile.style.backgroundColor = color;
         });
     });
-
-    console.log("Hover clicked")
 })
 
-document.getElementById("colorInput").addEventListener("input", function() {
-    color = this.value;
-});
+// Precision Effect
 
-function getColor(){
-    return document.getElementById("colorInput").value;
-}
+const precision = document.getElementById("manual")
+
+precision.addEventListener("click", function precisionEffect(){
+    color = document.getElementById("colorInput").value;
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => {
+        tile.addEventListener("click", function() {
+            tile.style.backgroundColor = color;
+        });
+    });
+})
+
 
