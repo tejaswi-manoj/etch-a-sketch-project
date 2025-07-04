@@ -109,6 +109,17 @@ eraser.addEventListener("click", function eraserEffect(){
     flag = 2;
 })
 
+// Clear 
+
+const clear = document.getElementById("clear")
+
+clear.addEventListener("click", function clearEffect(){
+    const tiles = document.querySelectorAll(".tile");
+    tiles.forEach(tile => {
+        tile.style.backgroundColor = "white";
+    })
+})
+
 
 // Get color functions
 
